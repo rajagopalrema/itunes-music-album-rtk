@@ -1,8 +1,8 @@
 
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getMusicAlbum } from "../MusicAlbumSlice";
-import { AppDispatch } from "../store";
+import { getMusicAlbum } from "../action/MusicAlbumSlice";
+import { AppDispatch } from "../action/store";
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import Divider from '@mui/material/Divider';
