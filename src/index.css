@@ -12,13 +12,13 @@ body {
   color:#565656;
 }
 
-.loader-padding{
-  padding: 15px 1em 0 2em;
-}
-
 .NoData
 {
   width:100%;
   margin-left: 10%;
   color:red;
+}
+
+.title{
+  color:#00A300;
 }

@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="App">
       <div id="container">
-      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUy7BBVWTBIfeoo2YkeqJBZ90nzHAiOY5fvH4hbN55s85S90OVvBzFUNDEVetgmDISyT4&usqp=CAU" style={{width:'250px', height:'200px'}}></img><h3>itunes Music List</h3></div>
+      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUy7BBVWTBIfeoo2YkeqJBZ90nzHAiOY5fvH4hbN55s85S90OVvBzFUNDEVetgmDISyT4&usqp=CAU" style={{width:'250px', height:'200px'}}></img><h1 className="title">itunes Music List</h1></div>
         <DisplayItunesData />
         <br />
         {/* { loading && <div>
