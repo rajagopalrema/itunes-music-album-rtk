@@ -13,9 +13,9 @@ const DisplayTableData = ({ musicAlbumList }: { musicAlbumList: any }) => {
         (musicAlbumList && musicAlbumList.length > 0) && musicAlbumList.map((musicInfo: IMusicAlbumData) => (
             <>
                 <div>
-                    <Card sx={{ display: 'flex', width: '100%', marginTop: '20px', height:'auto',backgroundColor: '#6495ED' }}>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '40px', backgroundColor: '#ffffff' }}>
-                            <CardContent sx={{ flex: '1 0 auto', height: 'auto' }}>
+                    <Card sx={{ display: 'flex', width: '100%', marginTop: '10px', height:'auto',backgroundColor: '#6495ED' }}>
+                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '30px', backgroundColor: '#ffffff' }}>
+                            <CardContent sx={{ flex: '1 0 auto', width:'100%'}}>
                                 <Typography component="div" variant="h5" color="#565656">
                                     {musicInfo.artistName}
                                 </Typography>
@@ -40,7 +40,7 @@ const DisplayTableData = ({ musicAlbumList }: { musicAlbumList: any }) => {
                         </Box>
                         <CardMedia
                             component="img"
-                            sx={{ width: 300, objectFit: "cover",marginTop: 5, alignContent:'top'}}
+                            sx={{ width: 300, objectFit:'fill',backgroundColor:'white'}}
                             image={musicInfo.artworkUrl100}
                             alt="Live from space album cover" />
                     </Card>

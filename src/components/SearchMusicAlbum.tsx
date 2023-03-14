@@ -26,7 +26,7 @@ function DisplayItunesData() {
   return (
     <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '800', backgroundColor:'#D3D3D3'}}>
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '800', backgroundColor:'#D3D3D3',marginBottom:'30px'}}>
       <IconButton sx={{ p: '10px', width: '600' }} aria-label="menu">
         <MenuIcon />
       </IconButton>

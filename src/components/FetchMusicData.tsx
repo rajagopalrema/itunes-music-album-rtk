@@ -8,7 +8,6 @@ import DisplayItunesData from "../components/SearchMusicAlbum"
 import DisplayTableData from "../components/DisplayTableData";
 
 function App() {
-  // Company list state
   const musicAlbumData: IMusicAlbumData[] = useSelector((state: any) => (state.musicAlbum.musicList));
   const loading = useSelector((state: any) => (state.musicAlbum.isloading));
   const [hasMore, setHasMore] = useState(true);
@@ -16,9 +15,6 @@ function App() {
   const dispatch = useDispatch<AppDispatch>();
   const rowsPerPage = 10;
 
-  // const handleSearch = (e: any) => {
-  //   setQuery(e.target.value);
-  // }
   useEffect(() => {
     dispatch(getMusicAlbum('null'));
   }, [dispatch]);
@@ -47,13 +43,11 @@ function App() {
       <div id="container">
       <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUy7BBVWTBIfeoo2YkeqJBZ90nzHAiOY5fvH4hbN55s85S90OVvBzFUNDEVetgmDISyT4&usqp=CAU" style={{width:'150px', height:'100px'}}></img><h3 className="title">itunes Music List</h3></div>
         <DisplayItunesData />
-        <br />
         {(musicAlbumData && musicAlbumData.length === 0) && !loading ? (
         <div className="d-flex justify-content-center">
           <p><h2 className="NoData">Ooops...No result found...</h2> </p>
         </div>
       ) :
-        // (companies && companies.length > 0) && companies.map((com: IMusicAlbumData, index) => (
           <><InfiniteScroll
             pageStart={0}
             initialLoad={false}
