@@ -26,17 +26,17 @@ function DisplayItunesData() {
   return (
     <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '800' }}>
-      <IconButton sx={{ p: '10px', width: '900' }} aria-label="menu">
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '800', backgroundColor:'#D3D3D3'}}>
+      <IconButton sx={{ p: '10px', width: '600' }} aria-label="menu">
         <MenuIcon />
       </IconButton>
       <InputBase
-        sx={{ ml: 1, flex: 1, width: 'auto' }}
+        sx={{ ml: 1, flex: 1, width: '600', color:'#028A0F', backgroundColor:"#ffffff", paddingLeft:'10px', fontSize:'16px'}}
         placeholder="Enter Artisits / Collection or Song Name..."
-        inputProps={{ 'aria-label': 'search google maps' }}
+        inputProps={{ 'aria-label': 'Enter Artisits / Collection or Song Name...' }}
         onChange={handleSearch}
       />
-      <IconButton type="button" onClick={searchString} sx={{ p: '10px' }} aria-label="search" >
+      <IconButton type="button" onClick={searchString} sx={{ p: '10px', backgroundColor:'#F5761A', marginLeft:'10px'}} aria-label="search" >
         <SearchIcon />
       </IconButton>
       <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />

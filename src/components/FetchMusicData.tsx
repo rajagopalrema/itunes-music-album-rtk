@@ -39,24 +39,15 @@ function App() {
     }
   }
   const fetchMoreData = (): IMusicAlbumData[] => {
-    return musicAlbumData.slice(0, dataIndex);
+    return musicAlbumData.length >0 ? musicAlbumData.slice(0, dataIndex):[];
   }
 
   return (
     <div className="App">
       <div id="container">
-      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUy7BBVWTBIfeoo2YkeqJBZ90nzHAiOY5fvH4hbN55s85S90OVvBzFUNDEVetgmDISyT4&usqp=CAU" style={{width:'250px', height:'200px'}}></img><h1 className="title">itunes Music List</h1></div>
+      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUy7BBVWTBIfeoo2YkeqJBZ90nzHAiOY5fvH4hbN55s85S90OVvBzFUNDEVetgmDISyT4&usqp=CAU" style={{width:'150px', height:'100px'}}></img><h3 className="title">itunes Music List</h3></div>
         <DisplayItunesData />
         <br />
-        {/* { loading && <div>
-          <div className="d-flex justify-content-center">
-              { <div className="spinner-border text-danger" role="status">
-                <span className="sr-only"></span>
-              </div>
-            } </div></div>
-        }
-        {!loading && error ? <div>{error}</div> : null} */}
-
         {(musicAlbumData && musicAlbumData.length === 0) && !loading ? (
         <div className="d-flex justify-content-center">
           <p><h2 className="NoData">Ooops...No result found...</h2> </p>
