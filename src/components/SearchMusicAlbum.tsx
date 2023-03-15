@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 
-function DisplayItunesData() {
+function SearchMusicAlbum() {
 
   const [query, setQuery] = useState<string>('');
   const dispatch = useDispatch<AppDispatch>();
@@ -43,4 +43,5 @@ function DisplayItunesData() {
     </Paper>
   );
 }
-export default DisplayItunesData
+
+export default SearchMusicAlbum

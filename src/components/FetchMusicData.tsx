@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getMusicAlbum } from "../action/MusicAlbumSlice";
 import { IMusicAlbumData } from '../interface';
 import { AppDispatch } from "../action/store";
-import DisplayItunesData from "../components/SearchMusicAlbum"
+import SearchMusicAlbum from "../components/SearchMusicAlbum"
 import DisplayTableData from "../components/DisplayTableData";
 
 function App() {
@@ -41,8 +41,8 @@ function App() {
   return (
     <div className="App">
       <div id="container">
-      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUy7BBVWTBIfeoo2YkeqJBZ90nzHAiOY5fvH4hbN55s85S90OVvBzFUNDEVetgmDISyT4&usqp=CAU" style={{width:'150px', height:'100px'}}></img><h3 className="title">itunes Music List</h3></div>
-        <DisplayItunesData />
+      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUy7BBVWTBIfeoo2YkeqJBZ90nzHAiOY5fvH4hbN55s85S90OVvBzFUNDEVetgmDISyT4&usqp=CAU" alt="Logo" style={{width:'150px', height:'100px'}}></img><h3 className="title">itunes Music List</h3></div>
+        <SearchMusicAlbum />
         {(musicAlbumData && musicAlbumData.length === 0) && !loading ? (
         <div className="d-flex justify-content-center">
           <p><h2 className="NoData">Ooops...No result found...</h2> </p>

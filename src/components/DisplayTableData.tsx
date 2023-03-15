@@ -12,7 +12,7 @@ const DisplayTableData = ({ musicAlbumList }: { musicAlbumList: any }) => {
     return (
         (musicAlbumList && musicAlbumList.length > 0) && musicAlbumList.map((musicInfo: IMusicAlbumData) => (
             <>
-                <div>
+                <div id="MusicData">
                     <Card sx={{ display: 'flex', width: '100%', marginTop: '10px', height:'auto',backgroundColor: '#6495ED' }}>
                         <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '30px', backgroundColor: '#ffffff' }}>
                             <CardContent sx={{ flex: '1 0 auto', width:'100%'}}>
