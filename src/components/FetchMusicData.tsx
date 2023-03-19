@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroller";
 import { useSelector, useDispatch } from "react-redux";
 import { getMusicAlbum } from "../action/MusicAlbumSlice";
-import { IMusicAlbumData } from '../interface';
-import { AppDispatch } from "../action/store";
+import { IMusicAlbumData } from '../Types/Interface';
+import { AppDispatch } from "../action/Store";
 import SearchMusicAlbum from "../components/SearchMusicAlbum"
 import DisplayTableData from "../components/DisplayTableData";
+import { Appcontainer } from "./styles/Container";
 
-function App() {
+function FetchMusicData() {
   const musicAlbumData: IMusicAlbumData[] = useSelector((state: any) => (state.musicAlbum.musicList));
   const loading = useSelector((state: any) => (state.musicAlbum.isloading));
   const [hasMore, setHasMore] = useState(true);
@@ -35,18 +36,17 @@ function App() {
     }
   }
   const fetchMoreData = (): IMusicAlbumData[] => {
-    return musicAlbumData.length >0 ? musicAlbumData.slice(0, dataIndex):[];
+    return musicAlbumData && musicAlbumData.length >0 ? musicAlbumData.slice(0, dataIndex):[];
   }
 
   return (
     <div className="App">
       <div id="container">
-      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUy7BBVWTBIfeoo2YkeqJBZ90nzHAiOY5fvH4hbN55s85S90OVvBzFUNDEVetgmDISyT4&usqp=CAU" alt="Logo" style={{width:'150px', height:'100px'}}></img><h3 className="title">itunes Music List</h3></div>
+      <div><Appcontainer.MainTitle><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUy7BBVWTBIfeoo2YkeqJBZ90nzHAiOY5fvH4hbN55s85S90OVvBzFUNDEVetgmDISyT4&usqp=CAU" alt="Logo" style={{width:'150px', height:'100px'}}></img>itunes Music List</Appcontainer.MainTitle></div>
         <SearchMusicAlbum />
+        
         {(musicAlbumData && musicAlbumData.length === 0) && !loading ? (
-        <div className="d-flex justify-content-center">
-          <p><h2 className="NoData">Ooops...No result found...</h2> </p>
-        </div>
+          <Appcontainer.DataNotAvailable>Ooops...No result found...</Appcontainer.DataNotAvailable>
       ) :
           <><InfiniteScroll
             pageStart={0}
@@ -55,7 +55,7 @@ function App() {
             hasMore={hasMore}
             loader={<div className="pt-60"><div className="d-flex justify-content-center">
               <div className="spinner-border text-danger" role="status">
-                <span className="sr-only"></span>
+                <span className="sr-only">data loading in progress...</span>
               </div>
             </div></div>}
             useWindow={true}>
@@ -68,4 +68,4 @@ function App() {
   );
 }
 
-export default App;
+export default FetchMusicData;

@@ -5,18 +5,17 @@ import CardMedia from '@mui/material/CardMedia';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { IMusicAlbumData } from '../interface';
+import { IMusicAlbumData } from '../Types/Interface';
 
 const DisplayTableData = ({ musicAlbumList }: { musicAlbumList: any }) => {
-
     return (
         (musicAlbumList && musicAlbumList.length > 0) && musicAlbumList.map((musicInfo: IMusicAlbumData) => (
             <>
-                <div id="MusicData">
-                    <Card sx={{ display: 'flex', width: '100%', marginTop: '10px', height:'auto',backgroundColor: '#6495ED' }}>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '30px', backgroundColor: '#ffffff' }}>
+                <div data-testid="MusicData">
+                    <Card sx={{ display: 'flex', width: '100%', marginTop: '10px', height:'auto', backgroundColor:'#FF9F29'}}>
+                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '30px', backgroundColor: '#FAF3E3' }}>
                             <CardContent sx={{ flex: '1 0 auto', width:'100%'}}>
-                                <Typography component="div" variant="h5" color="#565656">
+                                <Typography component="div" variant="h5">
                                     {musicInfo.artistName}
                                 </Typography>
                                 <Typography variant="h6" alignItems="left" color="text.secondary" component="div">
@@ -40,9 +39,9 @@ const DisplayTableData = ({ musicAlbumList }: { musicAlbumList: any }) => {
                         </Box>
                         <CardMedia
                             component="img"
-                            sx={{ width: 300, objectFit:'fill',backgroundColor:'white'}}
+                            sx={{ width: 300,  marginTop:4, marginBottom:3, marginright:5, marginlef:5, borderRadius:15, objectFit:'cover'}}
                             image={musicInfo.artworkUrl100}
-                            alt="Live from space album cover" />
+                            alt="Music Album" />
                     </Card>
                 </div></>
         )

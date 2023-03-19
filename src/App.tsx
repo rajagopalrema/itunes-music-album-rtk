@@ -1,8 +1,11 @@
+import { Appcontainer } from "./components/styles/Container";
 import FetchMusicData from "./components/FetchMusicData";
 
 function App() {
   return (
-    <FetchMusicData />
+    <Appcontainer>
+      <FetchMusicData />
+    </Appcontainer>
   )
 }
 
