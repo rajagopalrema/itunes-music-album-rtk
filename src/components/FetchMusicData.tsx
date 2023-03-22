@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroller";
 import { useSelector, useDispatch } from "react-redux";
-import { getMusicAlbum } from "../action/MusicAlbumSlice";
-import { IMusicAlbumData } from '../Types/Interface';
-import { AppDispatch } from "../action/Store";
+import { getMusicAlbum } from "../action/musicAlbumSlice";
+import { IMusicAlbumData } from '../types/MusicAlbumProps';
+import { AppDispatch } from "../action/store";
 import SearchMusicAlbum from "../components/SearchMusicAlbum"
 import DisplayTableData from "../components/DisplayTableData";
 import { Appcontainer } from "./styles/Container";

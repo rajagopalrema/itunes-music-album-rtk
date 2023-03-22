@@ -1,8 +1,8 @@
 import { render} from '@testing-library/react'
 import FetchMusicData from "../components/FetchMusicData"
 import { Provider } from 'react-redux';
-import * as APIService from '../action/MusicAlbumSlice';
-import store from "../action/Store";
+import * as APIService from '../action/musicAlbumSlice';
+import store from "../action/store";
 
 describe('Validate', () => {
 })

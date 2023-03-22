@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { IMusicAlbumData } from '../Types/Interface';
+import { IMusicAlbumData } from '../types/MusicAlbumProps';
 
 const DisplayTableData = ({ musicAlbumList }: { musicAlbumList: any }) => {
     return (
