@@ -5,15 +5,15 @@ import CardMedia from '@mui/material/CardMedia';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { IMusicAlbumData } from '../types/MusicAlbumProps';
+import { IMusicAlbumData } from '../types/MusicAlbumData';
 
 const DisplayTableData = ({ musicAlbumList }: { musicAlbumList: any }) => {
     return (
         (musicAlbumList && musicAlbumList.length > 0) && musicAlbumList.map((musicInfo: IMusicAlbumData) => (
             <>
                 <div data-testid="MusicData">
-                    <Card sx={{ display: 'flex', width: '100%', marginTop: '10px', height:'auto', backgroundColor:'#FF9F29'}}>
-                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '30px', backgroundColor: '#FAF3E3' }}>
+                    <Card sx={{ display: 'flex', width: '100%', marginTop: '10px', height:'auto', backgroundColor:'#3399FF'}}>
+                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', marginTop: '30px', backgroundColor: '#FFFFFF' }}>
                             <CardContent sx={{ flex: '1 0 auto', width:'100%'}}>
                                 <Typography component="div" variant="h5">
                                     {musicInfo.artistName}

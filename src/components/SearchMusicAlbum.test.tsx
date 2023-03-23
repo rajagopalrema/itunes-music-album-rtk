@@ -1,7 +1,7 @@
 import { render, screen, RenderResult} from '@testing-library/react'
 import SearchMusicAlbum from "../components/SearchMusicAlbum"
 import { Provider } from 'react-redux';
-import store from '../action/store';
+import store from '../feature/store';
 
 export const renderSearch = (): RenderResult =>
     render(<Provider store={store}><SearchMusicAlbum /></Provider>

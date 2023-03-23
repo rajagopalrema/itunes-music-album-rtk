@@ -1,8 +1,8 @@
 
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getMusicAlbum } from "../action/musicAlbumSlice";
-import { AppDispatch } from "../action/store";
+import { getMusicAlbum } from "../feature/musicAlbumSlice";
+import { AppDispatch } from "../feature/store";
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import Divider from '@mui/material/Divider';
@@ -40,7 +40,7 @@ function SearchMusicAlbum() {
         <MenuIcon />
       </IconButton>
       <InputBase
-        sx={{ ml: 1, flex: 1, width: '600', color: '#028A0F', backgroundColor: "#ffffff", paddingLeft: '10px', fontSize: '16px' }}
+        sx={{ ml: 1, flex: 1, width: '600', color: '#217C7E', backgroundColor: "#ffffff", paddingLeft: '10px', fontSize: '16px' }}
         placeholder="Enter Artist / Collection or Song Name..."
         inputProps={{ 'aria-label': 'Enter Artist / Collection or Song Name...' }}
         onChange={handleSearch}

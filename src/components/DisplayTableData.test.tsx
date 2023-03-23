@@ -1,6 +1,6 @@
 import { render, screen, RenderResult, fireEvent, within } from '@testing-library/react'
 import { Provider } from 'react-redux';
-import store from '../action/store';
+import store from '../feature/store';
 import FetchMusicData from './FetchMusicData';
 
 export const renderSearch = (): RenderResult =>
